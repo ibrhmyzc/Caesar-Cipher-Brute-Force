@@ -7,7 +7,6 @@ namespace Cipher_Decoder
 {
     public class Decoder
     {
-        private ulong _counter = 0;
         private HashSet<String> _document;
         private HashSet<String> _dictionary;
         private String _filename;
@@ -33,7 +32,6 @@ namespace Cipher_Decoder
             return true;
         }
         public void Permutation(String alphabet, int left, int right) {
-            ++_counter;
             if(left == right) {
                 var decodedAlphabet = alphabet.ToCharArray();
                 if(Check(decodedAlphabet)) {
